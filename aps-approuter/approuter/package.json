@@ -1,0 +1,10 @@
+{
+  "name": "aps-approuter",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@sap/approuter": "^16"
+  },
+  "scripts": {
+    "start": "node node_modules/@sap/approuter/approuter.js"
+  }
+}

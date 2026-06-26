@@ -1,0 +1,28 @@
+_schema-version: "3.2"
+ID: com.company.aps.approuter
+version: 1.0.0
+
+modules:
+  - name: aps-approuter
+    type: nodejs                 # plain nodejs app running @sap/approuter
+    path: approuter
+    parameters:
+      memory: 256M
+      disk-quota: 512M
+      instances: 2               # HA — see Section 12
+    requires:
+      - name: aps-uaa
+      - name: aps-html5-runtime
+
+resources:
+  - name: aps-uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+  - name: aps-html5-runtime
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-runtime

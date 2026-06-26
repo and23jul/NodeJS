@@ -1,0 +1,10 @@
+{
+  "xsappname": "aps-approuter",
+  "tenant-mode": "dedicated",
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "https://*.cfapps.<region>.hana.ondemand.com/**",
+      "https://totalenergies-btp.com/**"
+    ]
+  }
+}

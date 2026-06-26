@@ -1,0 +1,17 @@
+{
+  "authenticationMethod": "route", 
+  "sessionTimeout": 30,
+  "welcomeFile": "/aps/apps/home/index-welcome.html", 
+  "logout": {
+      "logoutEndpoint": "/logout",
+      "logoutPage": "/aps/apps/home/index-goodbye.html"
+  },
+  "routes": [
+    {
+      "source": "^/aps/apps/(.*)$",
+      "target": "/$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}
