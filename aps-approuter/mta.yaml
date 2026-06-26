@@ -1,11 +1,11 @@
 _schema-version: "3.1"
 ID: aps-approuter
-version: 1.0.0
+version: 1.0.1
 
 modules:
   - name: aps-approuter
-    type: approuter.nodejs
-    path: .
+    type: nodejs
+    path: approuter
     parameters:
       disk-quota: 256M
       memory: 256M
@@ -16,11 +16,9 @@ modules:
 
 resources:
   - name: aps-approuter-xsuaa
-    type: org.cloudfoundry.managed-service
+    type: org.cloudfoundry.existing-service
     parameters:
-      service: xsuaa
-      service-plan: application
-      path: ./xs-security.json
+      service-name: aps-uaa
 
   - name: aps-approuter-html5-apps-repo-rt   # app-runtime, not app-host
     type: org.cloudfoundry.managed-service

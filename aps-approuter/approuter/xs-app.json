@@ -14,6 +14,12 @@
       "authenticationType": "xsuaa"
     },
     {
+      "source": "^/orderfulfillment/(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    },
+    {
      "source": "^(.*)$",
       "target": "$1",
       "service": "html5-apps-repo-rt",
