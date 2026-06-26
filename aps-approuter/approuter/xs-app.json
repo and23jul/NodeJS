@@ -1,15 +1,21 @@
 {
   "authenticationMethod": "route", 
   "sessionTimeout": 30,
-  "welcomeFile": "/aps/apps/home/index-welcome.html", 
+  "welcomeFile": "/index.html", 
   "logout": {
       "logoutEndpoint": "/logout",
       "logoutPage": "/aps/apps/home/index-goodbye.html"
   },
   "routes": [
     {
-      "source": "^/aps/apps/(.*)$",
-      "target": "/$1",
+      "source": "^/sap/opu/odata/(.*)$",
+      "target": "/sap/opu/odata/$1",
+      "destination": "Gateway-x96-SSO",
+      "authenticationType": "xsuaa"
+    },
+    {
+     "source": "^(.*)$",
+      "target": "$1",
       "service": "html5-apps-repo-rt",
       "authenticationType": "xsuaa"
     }
