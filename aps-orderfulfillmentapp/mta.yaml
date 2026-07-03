@@ -1,6 +1,6 @@
 _schema-version: "3.1"
 ID: order-fulfillment-app
-version: 1.0.1
+version: 1.0.3
 
 build-parameters:
   before-all:
@@ -27,6 +27,8 @@ modules:
       - name: order-fulfillment-app-html5-repo-host
         parameters:
           content-target: true
+      - name: order-fulfillment-app-xsuaa
+      - name: order-fulfillment-app-destination
     build-parameters:
       build-result: resources
       requires:
@@ -41,4 +43,20 @@ resources:
     parameters:
       service: html5-apps-repo
       service-plan: app-host
+
+  - name: order-fulfillment-app-xsuaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+
+  - name: order-fulfillment-app-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
+      config:
+        HTML5Runtime_enabled: true              # ← registers the app-host with the managed HTML5 runtime (Work Zone) so it appears in HTML5 Applications
+        version: 1.0.0
 

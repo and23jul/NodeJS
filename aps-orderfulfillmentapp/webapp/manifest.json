@@ -6,7 +6,7 @@
     "i18n": "i18n/i18n.properties",
     "title": "Order Fulfillment",
     "description": "SAP UI5 Order Fulfillment System",
-    "applicationVersion": { "version": "1.0.0" },
+    "applicationVersion": { "version": "1.0.3" },
     "dataSources": {
       "mainService": {
         "uri": "/sap/opu/odata/sap/ZORDER_FULFILLMENT_SRV/",

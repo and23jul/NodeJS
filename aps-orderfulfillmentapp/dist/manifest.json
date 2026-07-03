@@ -12,7 +12,7 @@
 		"title": "Order Fulfillment",
 		"description": "SAP UI5 Order Fulfillment System",
 		"applicationVersion": {
-			"version": "1.0.0"
+			"version": "1.0.3"
 		},
 		"dataSources": {
 			"mainService": {

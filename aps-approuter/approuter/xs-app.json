@@ -20,16 +20,17 @@
       "authenticationType": "xsuaa"
     },
     {
-      "source": "^/com.demo.demogeomap/(.*)$",
+      "source": "^/geomapdemo/(.*)$",
       "target": "$1",
       "service": "html5-apps-repo-rt",
       "authenticationType": "xsuaa"
     },
-    {
-     "source": "^(.*)$",
+        {
+      "source": "^/geomap_demo2/(.*)$",
       "target": "$1",
       "service": "html5-apps-repo-rt",
       "authenticationType": "xsuaa"
     }
+
   ]
 }

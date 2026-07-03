@@ -1,6 +1,6 @@
 {
   "name": "order-fulfillment-app",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "SAP UI5 Order Fulfillment System",
   "scripts": {
     "start": "ui5 serve",
