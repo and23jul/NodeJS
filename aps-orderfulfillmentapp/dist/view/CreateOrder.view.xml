@@ -1,0 +1,151 @@
+<mvc:View
+    controllerName="orderfulfillment.controller.CreateOrder"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    displayBlock="true">
+
+    <Page
+        id="createOrderPage"
+        title="{i18n>createOrderTitle}"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+
+        <headerContent>
+            <Button
+                text="{i18n>actionSave}"
+                type="Emphasized"
+                icon="sap-icon://save"
+                press=".onSave"/>
+            <Button
+                text="{i18n>actionClose}"
+                icon="sap-icon://decline"
+                press=".onNavBack"/>
+        </headerContent>
+
+        <content>
+            <VBox class="sapUiMediumMargin">
+
+                <!-- Order Header Form -->
+                <Panel headerText="Order Header" expandable="false" class="sapUiMediumMarginBottom">
+                    <content>
+                        <form:SimpleForm
+                            id="headerForm"
+                            editable="true"
+                            layout="ResponsiveGridLayout"
+                            labelSpanL="3" labelSpanM="4"
+                            emptySpanL="1" emptySpanM="1"
+                            columnsL="2" columnsM="2"
+                            class="sapUiSmallMargin">
+                            <form:content>
+                                <Label text="Customer ID" required="true"/>
+                                <Input
+                                    id="customerId"
+                                    value="{newOrder>/CustomerId}"
+                                    placeholder="e.g. CUST001"
+                                    valueLiveUpdate="true"/>
+
+                                <Label text="Customer Name" required="true"/>
+                                <Input
+                                    id="customerName"
+                                    value="{newOrder>/CustomerName}"
+                                    placeholder="Full customer name"/>
+
+                                <Label text="Order Date" required="true"/>
+                                <DatePicker
+                                    id="orderDate"
+                                    value="{
+                                        path: 'newOrder>/OrderDate',
+                                        type: 'sap.ui.model.type.Date'
+                                    }"/>
+
+                                <Label text="Requested Delivery Date"/>
+                                <DatePicker
+                                    id="deliveryDate"
+                                    value="{
+                                        path: 'newOrder>/DeliveryDate',
+                                        type: 'sap.ui.model.type.Date'
+                                    }"/>
+
+                                <Label text="Currency" required="true"/>
+                                <Select
+                                    id="currency"
+                                    selectedKey="{newOrder>/Currency}">
+                                    <items>
+                                        <core:Item key="USD" text="USD - US Dollar"/>
+                                        <core:Item key="EUR" text="EUR - Euro"/>
+                                        <core:Item key="GBP" text="GBP - British Pound"/>
+                                        <core:Item key="JPY" text="JPY - Japanese Yen"/>
+                                    </items>
+                                </Select>
+
+                                <Label text="Shipping Address"/>
+                                <TextArea
+                                    id="shippingAddress"
+                                    value="{newOrder>/ShippingAddress}"
+                                    rows="2"
+                                    width="100%"
+                                    placeholder="Full shipping address"/>
+
+                                <Label text="Notes"/>
+                                <TextArea
+                                    id="notes"
+                                    value="{newOrder>/Notes}"
+                                    rows="2"
+                                    width="100%"
+                                    placeholder="Optional order notes"/>
+                            </form:content>
+                        </form:SimpleForm>
+                    </content>
+                </Panel>
+
+                <!-- Line Items -->
+                <Panel headerText="Line Items" expandable="false">
+                    <headerToolbar>
+                        <OverflowToolbar>
+                            <Title text="Line Items"/>
+                            <ToolbarSpacer/>
+                            <Button
+                                text="Add Item"
+                                icon="sap-icon://add"
+                                type="Transparent"
+                                press=".onAddItem"/>
+                        </OverflowToolbar>
+                    </headerToolbar>
+                    <content>
+                        <Table
+                            id="itemsTable"
+                            items="{newOrder>/Items}"
+                            noDataText="No items added yet — press Add Item">
+                            <columns>
+                                <Column><Text text="Product ID"/></Column>
+                                <Column><Text text="Product Name"/></Column>
+                                <Column width="8rem" hAlign="End"><Text text="Quantity"/></Column>
+                                <Column width="5rem"><Text text="Unit"/></Column>
+                                <Column width="9rem" hAlign="End"><Text text="Unit Price"/></Column>
+                                <Column width="4rem"/>
+                            </columns>
+                            <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <Input value="{newOrder>ProductId}"   placeholder="MAT-XXXX"/>
+                                        <Input value="{newOrder>ProductName}" placeholder="Product description"/>
+                                        <Input value="{newOrder>Quantity}"    type="Number" placeholder="0"/>
+                                        <Input value="{newOrder>Unit}"        placeholder="EA"/>
+                                        <Input value="{newOrder>UnitPrice}"   type="Number" placeholder="0.00"/>
+                                        <Button
+                                            icon="sap-icon://delete"
+                                            type="Transparent"
+                                            press=".onDeleteItem"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </content>
+                </Panel>
+
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

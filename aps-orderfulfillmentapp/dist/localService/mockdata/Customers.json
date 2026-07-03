@@ -1,0 +1,86 @@
+[
+  {
+    "CustomerId": "CUST001",
+    "CustomerName": "Acme Corporation",
+    "Email": "orders@acmecorp.com",
+    "Phone": "+1-212-555-0100",
+    "Address": "100 Commerce St, New York, NY 10001, USA"
+  },
+  {
+    "CustomerId": "CUST002",
+    "CustomerName": "Global Supplies Ltd",
+    "Email": "procurement@globalsup.com",
+    "Phone": "+1-312-555-0200",
+    "Address": "55 Industrial Ave, Chicago, IL 60601, USA"
+  },
+  {
+    "CustomerId": "CUST003",
+    "CustomerName": "Tech Partners Inc",
+    "Email": "ops@techpartners.com",
+    "Phone": "+1-408-555-0300",
+    "Address": "789 Silicon Blvd, San Jose, CA 95110, USA"
+  },
+  {
+    "CustomerId": "CUST004",
+    "CustomerName": "Bright Future Co",
+    "Email": "info@brightfuture.com",
+    "Phone": "+1-512-555-0400",
+    "Address": "22 Sunrise Rd, Austin, TX 78701, USA"
+  },
+  {
+    "CustomerId": "CUST005",
+    "CustomerName": "Nordic Imports",
+    "Email": "import@nordicimports.no",
+    "Phone": "+47-22-555-0500",
+    "Address": "Strandveien 10, 0250 Oslo, Norway"
+  },
+  {
+    "CustomerId": "CUST006",
+    "CustomerName": "Meridian Healthcare",
+    "Email": "supply@meridianhc.co.uk",
+    "Phone": "+44-20-7555-0601",
+    "Address": "14 Harley St, London W1G 9PH, UK"
+  },
+  {
+    "CustomerId": "CUST007",
+    "CustomerName": "Apex Logistics Co",
+    "Email": "ops@apexlogistics.com",
+    "Phone": "+1-713-555-0700",
+    "Address": "3400 Harbor Blvd, Houston, TX 77001, USA"
+  },
+  {
+    "CustomerId": "CUST008",
+    "CustomerName": "Solaris Energy GmbH",
+    "Email": "einkauf@solaris-energy.de",
+    "Phone": "+49-89-555-0800",
+    "Address": "Maximilianstrasse 35, 80539 Munich, Germany"
+  },
+  {
+    "CustomerId": "CUST009",
+    "CustomerName": "Tanaka Industries",
+    "Email": "purchasing@tanaka-ind.co.jp",
+    "Phone": "+81-3-5555-0900",
+    "Address": "2-1-1 Marunouchi, Chiyoda-ku, Tokyo 100-0005, Japan"
+  },
+  {
+    "CustomerId": "CUST010",
+    "CustomerName": "BlueSky Retail",
+    "Email": "inventory@blueskyretail.com",
+    "Phone": "+1-602-555-1000",
+    "Address": "950 E Camelback Rd, Phoenix, AZ 85014, USA"
+  },
+  {
+    "CustomerId": "CUST011",
+    "CustomerName": "Oceanic Trade BV",
+    "Email": "inkoop@oceanictrade.nl",
+    "Phone": "+31-20-555-1100",
+    "Address": "Herengracht 458, 1017 CA Amsterdam, Netherlands"
+  },
+  {
+    "CustomerId": "CUST012",
+    "CustomerName": "SingaTech Pte Ltd",
+    "Email": "procurement@singatech.sg",
+    "Phone": "+65-6555-1200",
+    "Address": "1 Raffles Place, #20-01, Singapore 048616"
+  }
+]

@@ -1,0 +1,122 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "orderfulfillment",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "Order Fulfillment",
+    "description": "SAP UI5 Order Fulfillment System",
+    "applicationVersion": { "version": "1.0.0" },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZORDER_FULFILLMENT_SRV/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "sap-icon://sales-order"
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": false
+    },
+    "fullWidth": true
+  },
+  "sap.cloud": {
+    "service": "order-fulfillment-app.service",
+    "public": true
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "orderfulfillment.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.120.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {},
+        "sap.uxap": {},
+        "sap.f": {}
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "orderfulfillment.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "settings": {
+          "useBatch": false,
+          "defaultCountMode": "Request",
+          "defaultBindingMode": "OneWay",
+          "refreshAfterChange": false
+        }
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "orderfulfillment.view",
+        "controlId": "appNav",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "orderList",
+          "pattern": "",
+          "target": "orderList"
+        },
+        {
+          "name": "orderDetail",
+          "pattern": "Orders/{orderId}",
+          "target": "orderDetail"
+        },
+        {
+          "name": "createOrder",
+          "pattern": "Orders/create",
+          "target": "createOrder"
+        }
+      ],
+      "targets": {
+        "orderList": {
+          "viewName": "OrderList",
+          "viewId": "orderList",
+          "viewLevel": 1
+        },
+        "orderDetail": {
+          "viewName": "OrderDetail",
+          "viewId": "orderDetail",
+          "viewLevel": 2
+        },
+        "createOrder": {
+          "viewName": "CreateOrder",
+          "viewId": "createOrder",
+          "viewLevel": 2
+        }
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    }
+  }
+}

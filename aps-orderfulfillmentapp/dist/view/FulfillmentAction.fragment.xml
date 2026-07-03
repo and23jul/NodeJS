@@ -1,0 +1,58 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:layout="sap.ui.layout">
+
+    <Dialog
+        title="{dialog>/title}"
+        contentWidth="25rem"
+        draggable="true"
+        resizable="true">
+
+        <content>
+            <VBox class="sapUiSmallMargin">
+
+                <!-- Ship Order Fields -->
+                <VBox visible="{dialog>/showShipFields}">
+                    <Label text="Tracking Number" required="true" class="sapUiSmallMarginBottom"/>
+                    <Input
+                        id="trackingInput"
+                        value="{dialog>/trackingNumber}"
+                        placeholder="e.g. 1Z999AA10123456784"
+                        class="sapUiSmallMarginBottom"/>
+                    <Label text="Ship Date" required="true" class="sapUiSmallMarginBottom"/>
+                    <DatePicker
+                        id="shipDatePicker"
+                        value="{
+                            path: 'dialog>/shipDate',
+                            type: 'sap.ui.model.type.Date'
+                        }"
+                        class="sapUiSmallMarginBottom"/>
+                </VBox>
+
+                <!-- Cancel Order Fields -->
+                <VBox visible="{dialog>/showCancelFields}">
+                    <Label text="Cancellation Reason" required="true" class="sapUiSmallMarginBottom"/>
+                    <TextArea
+                        id="cancelReasonInput"
+                        value="{dialog>/cancelReason}"
+                        rows="4"
+                        growing="true"
+                        placeholder="Enter reason for cancellation..."
+                        width="100%"/>
+                </VBox>
+
+            </VBox>
+        </content>
+
+        <buttons>
+            <Button
+                text="Confirm"
+                type="Emphasized"
+                press=".onFulfillmentConfirm"/>
+            <Button
+                text="Cancel"
+                press=".onFulfillmentCancel"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,191 @@
+<mvc:View
+    controllerName="orderfulfillment.controller.OrderDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap"
+    xmlns:layout="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    displayBlock="true">
+
+    <uxap:ObjectPageLayout
+        id="orderDetailPage"
+        showTitleInHeaderContent="true"
+        alwaysShowContentHeader="false"
+        preserveHeaderStateOnScroll="false">
+
+        <uxap:headerTitle>
+            <uxap:ObjectPageDynamicHeaderTitle>
+                <uxap:heading>
+                    <Title text="Order {OrderId}"/>
+                </uxap:heading>
+                <uxap:snappedHeading>
+                    <Title text="Order {OrderId}"/>
+                </uxap:snappedHeading>
+                <uxap:expandedContent>
+                    <ObjectStatus
+                        text="{
+                            path: 'Status',
+                            formatter: '.formatter.statusText'
+                        }"
+                        state="{
+                            path: 'Status',
+                            formatter: '.formatter.statusState'
+                        }"
+                        inverted="true"/>
+                </uxap:expandedContent>
+                <uxap:actions>
+                    <Button
+                        id="btnConfirm"
+                        text="{i18n>actionConfirm}"
+                        type="Emphasized"
+                        icon="sap-icon://accept"
+                        press=".onConfirmOrder"
+                        visible="{
+                            path: 'Status',
+                            formatter: '.formatter.canConfirm'
+                        }"/>
+                    <Button
+                        id="btnShip"
+                        text="{i18n>actionShip}"
+                        type="Emphasized"
+                        icon="sap-icon://shipping-status"
+                        press=".onShipOrder"
+                        visible="{
+                            path: 'Status',
+                            formatter: '.formatter.canShip'
+                        }"/>
+                    <Button
+                        id="btnCancel"
+                        text="{i18n>actionCancel}"
+                        type="Negative"
+                        icon="sap-icon://cancel"
+                        press=".onCancelOrder"
+                        visible="{
+                            path: 'Status',
+                            formatter: '.formatter.canCancel'
+                        }"/>
+                    <Button
+                        text="{i18n>actionBack}"
+                        icon="sap-icon://nav-back"
+                        press=".onNavBack"/>
+                </uxap:actions>
+            </uxap:ObjectPageDynamicHeaderTitle>
+        </uxap:headerTitle>
+
+        <uxap:headerContent>
+            <layout:HorizontalLayout>
+                <ObjectAttribute title="{i18n>fieldCustomer}"    text="{CustomerName}"/>
+                <ObjectAttribute title="{i18n>fieldOrderDate}"   text="{
+                    path: 'OrderDate',
+                    type: 'sap.ui.model.type.Date',
+                    formatOptions: { style: 'medium' }
+                }"/>
+                <ObjectAttribute title="{i18n>fieldDeliveryDate}" text="{
+                    path: 'DeliveryDate',
+                    type: 'sap.ui.model.type.Date',
+                    formatOptions: { style: 'medium' }
+                }"/>
+                <ObjectNumber
+                    number="{TotalAmount}"
+                    unit="{Currency}"
+                    emphasized="true"/>
+            </layout:HorizontalLayout>
+        </uxap:headerContent>
+
+        <uxap:sections>
+
+            <!-- Order Details Section -->
+            <uxap:ObjectPageSection title="{i18n>orderSection}" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <form:SimpleForm
+                            editable="false"
+                            layout="ResponsiveGridLayout"
+                            labelSpanL="3" labelSpanM="4"
+                            emptySpanL="1" emptySpanM="1"
+                            columnsL="2" columnsM="2">
+                            <form:content>
+                                <Label text="{i18n>fieldOrderId}"/>
+                                <Text text="{OrderId}"/>
+                                <Label text="{i18n>fieldStatus}"/>
+                                <ObjectStatus
+                                    text="{
+                                        path: 'Status',
+                                        formatter: '.formatter.statusText'
+                                    }"
+                                    state="{
+                                        path: 'Status',
+                                        formatter: '.formatter.statusState'
+                                    }"/>
+                                <Label text="{i18n>fieldShippingAddress}"/>
+                                <Text text="{ShippingAddress}"/>
+                                <Label text="{i18n>fieldNotes}"/>
+                                <Text text="{Notes}"/>
+                            </form:content>
+                        </form:SimpleForm>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+            <!-- Customer Section -->
+            <uxap:ObjectPageSection title="{i18n>customerSection}" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <form:SimpleForm
+                            editable="false"
+                            layout="ResponsiveGridLayout"
+                            labelSpanL="3" labelSpanM="4"
+                            emptySpanL="1" emptySpanM="1"
+                            columnsL="2" columnsM="2">
+                            <form:content>
+                                <Label text="{i18n>fieldCustomer}"/>
+                                <Text text="{CustomerName}"/>
+                                <Label text="Customer ID"/>
+                                <Text text="{CustomerId}"/>
+                            </form:content>
+                        </form:SimpleForm>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+            <!-- Line Items Section -->
+            <uxap:ObjectPageSection title="{i18n>itemsSection}" titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="">
+                        <Table
+                            id="itemsTable"
+                            items="{Items}"
+                            noDataText="No items">
+                            <columns>
+                                <Column width="6rem"><Text text="Item"/></Column>
+                                <Column width="10rem"><Text text="{i18n>fieldProduct}"/></Column>
+                                <Column><Text text="Product Name"/></Column>
+                                <Column width="7rem" hAlign="End"><Text text="{i18n>fieldQuantity}"/></Column>
+                                <Column width="5rem" hAlign="Center"><Text text="{i18n>fieldUnit}"/></Column>
+                                <Column width="9rem" hAlign="End"><Text text="{i18n>fieldUnitPrice}"/></Column>
+                                <Column width="9rem" hAlign="End"><Text text="{i18n>fieldTotalPrice}"/></Column>
+                                <Column width="9rem" hAlign="End"><Text text="{i18n>fieldFulfilledQty}"/></Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <Text text="{ItemId}"/>
+                                        <Text text="{ProductId}"/>
+                                        <Text text="{ProductName}"/>
+                                        <Text text="{Quantity}"/>
+                                        <Text text="{Unit}"/>
+                                        <ObjectNumber number="{UnitPrice}" unit="{Currency}"/>
+                                        <ObjectNumber number="{TotalPrice}" unit="{Currency}" emphasized="true"/>
+                                        <Text text="{FulfilledQty}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
+</mvc:View>

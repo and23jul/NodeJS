@@ -1,0 +1,44 @@
+_schema-version: "3.1"
+ID: order-fulfillment-app
+version: 1.0.1
+
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm ci
+
+modules:
+  - name: order-fulfillment-app
+    type: html5
+    path: .
+    build-parameters:
+      builder: custom
+      commands:
+        - npm run build
+        - bash -c "cd dist && zip -r order-fulfillment-app.zip ."
+      supported-platforms: []
+      build-result: dist
+
+  - name: order-fulfillment-app-deployer
+    type: com.sap.application.content
+    path: .
+    requires:
+      - name: order-fulfillment-app-html5-repo-host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+        - artifacts:
+            - order-fulfillment-app.zip
+          name: order-fulfillment-app
+          target-path: resources/
+
+resources:
+  - name: order-fulfillment-app-html5-repo-host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-host
+
