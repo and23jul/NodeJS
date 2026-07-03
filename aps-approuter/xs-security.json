@@ -4,7 +4,9 @@
   "oauth2-configuration": {
     "redirect-uris": [
       "https://*.cfapps.eu10-004.hana.ondemand.com/**",
-      "https://totalenergies-btp.com/**"
+      "https://totalenergies-btp.com/**",
+      "https://apps.aps.tgits.totalenergies.com/**",
+      "https://*.tgits.totalenergies.com/**"
     ]
   }
 }
