@@ -14,25 +14,6 @@
       "authenticationType": "xsuaa"
     },
     {
-      "source": "^/orderfulfillment/(.*)$",
-      "target": "$1",
-      "service": "html5-apps-repo-rt",
-      "authenticationType": "xsuaa"
-    },
-    {
-      "source": "^/geomapdemo/(.*)$",
-      "target": "$1",
-      "service": "html5-apps-repo-rt",
-      "authenticationType": "xsuaa"
-    },
-    {
-      "source": "^/geomap_demo2/(.*)$",
-      "target": "$1",
-      "service": "html5-apps-repo-rt",
-      "authenticationType": "xsuaa"
-    },
-   
-    {
      "source": "^(.*)$",
       "target": "$1",
       "service": "html5-apps-repo-rt",

@@ -1,6 +1,6 @@
 _schema-version: "3.1"
 ID: aps-approuter
-version: 1.0.1
+version: 1.0.5
 
 modules:
   - name: aps-approuter
@@ -10,23 +10,21 @@ modules:
       disk-quota: 256M
       memory: 256M
     requires:
-      - name: aps-approuter-xsuaa
-      - name: aps-approuter-html5-apps-repo-rt
-      - name: aps-approuter-destination
+      - name: XSUAA-application-APSAppRouter
+      - name: HTML5-app_runtime-APSAppRouter
+      - name: DEST-lite-APSAppRouter
 
 resources:
-  - name: aps-approuter-xsuaa
+  - name: XSUAA-application-APSAppRouter
     type: org.cloudfoundry.existing-service
-    parameters:
-      service-name: aps-uaa
 
-  - name: aps-approuter-html5-apps-repo-rt   # app-runtime, not app-host
+  - name: HTML5-app_runtime-APSAppRouter        # app-runtime, not app-host
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
-      service-plan: app-runtime              # ← serves content; each app has its own app-host
+      service-plan: app-runtime                 # ← serves content; each app has its own app-host
 
-  - name: aps-approuter-destination
+  - name: DEST-lite-APSAppRouter
     type: org.cloudfoundry.managed-service
     parameters:
       service: destination
