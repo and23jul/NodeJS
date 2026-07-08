@@ -5,9 +5,9 @@
     "redirect-uris": [
       "https://*.cfapps.eu10-004.hana.ondemand.com/**",
       "https://totalenergies-btp.com/**",
-      "https://devt-apps.aps.tgits.totalenergies.com/**",
-      "https://qual-apps.aps.tgits.totalenergies.com/**",
-      "https://prod-apps.aps.tgits.totalenergies.com/**",
+      "https://apps.devt-aps.tgits.totalenergies.com/**",
+      "https://apps.qual-aps.tgits.totalenergies.com/**",
+      "https://apps.prod-aps.tgits.totalenergies.com/**",
       "https://*.tgits.totalenergies.com/**"
     ]
   }
