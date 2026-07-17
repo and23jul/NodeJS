@@ -13,6 +13,12 @@
       "destination": "Gateway-x96-SSO",
       "authenticationType": "xsuaa"
     },
+    {                                                    // ← ADD THIS
+      "source": "^/role-coll-scanner-api/(.*)$",
+      "target": "/api/$1",
+      "destination": "role-coll-scanner-web-api",
+      "authenticationType": "xsuaa"
+    },
     {
      "source": "^(.*)$",
       "target": "$1",
