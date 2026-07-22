@@ -16,7 +16,7 @@
     {                                                    
       "source": "^/role-coll-scanner-api/(.*)$",
       "target": "/api/$1",
-      "destination": "role-coll-scanner-web-api",
+      "destination": "BTPApp-RoleCollectionScannerWebAPI",
       "authenticationType": "xsuaa"
     },
     {
