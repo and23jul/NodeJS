@@ -1,0 +1,250 @@
+{
+  "communities": {
+    "0": [
+      "aps_orderfulfillmentapp_webapp_manifest_createorder_viewid",
+      "aps_orderfulfillmentapp_webapp_manifest_createorder_viewlevel",
+      "aps_orderfulfillmentapp_webapp_manifest_createorder_viewname",
+      "aps_orderfulfillmentapp_webapp_manifest_orderdetail_viewid",
+      "aps_orderfulfillmentapp_webapp_manifest_orderdetail_viewlevel",
+      "aps_orderfulfillmentapp_webapp_manifest_orderdetail_viewname",
+      "aps_orderfulfillmentapp_webapp_manifest_orderlist_viewid",
+      "aps_orderfulfillmentapp_webapp_manifest_orderlist_viewlevel",
+      "aps_orderfulfillmentapp_webapp_manifest_orderlist_viewname",
+      "aps_orderfulfillmentapp_webapp_manifest_routing_routes",
+      "aps_orderfulfillmentapp_webapp_manifest_routing_targets",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_routing",
+      "aps_orderfulfillmentapp_webapp_manifest_targets_createorder",
+      "aps_orderfulfillmentapp_webapp_manifest_targets_orderdetail",
+      "aps_orderfulfillmentapp_webapp_manifest_targets_orderlist"
+    ],
+    "1": [
+      "aps_orderfulfillmentapp_package",
+      "aps_orderfulfillmentapp_package_description",
+      "aps_orderfulfillmentapp_package_devdependencies",
+      "aps_orderfulfillmentapp_package_devdependencies_ui5_cli",
+      "aps_orderfulfillmentapp_package_name",
+      "aps_orderfulfillmentapp_package_overrides",
+      "aps_orderfulfillmentapp_package_overrides_undici",
+      "aps_orderfulfillmentapp_package_scripts",
+      "aps_orderfulfillmentapp_package_scripts_build",
+      "aps_orderfulfillmentapp_package_scripts_lint",
+      "aps_orderfulfillmentapp_package_scripts_start",
+      "aps_orderfulfillmentapp_package_version",
+      "ui5_cli"
+    ],
+    "2": [
+      "aps_orderfulfillmentapp_webapp_manifest",
+      "aps_orderfulfillmentapp_webapp_manifest_applicationversion_version",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_app",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_app_applicationversion",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_app_description",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_app_i18n",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_app_id",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_app_title",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_app_type",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_cloud",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_cloud_public",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_cloud_service",
+      "aps_orderfulfillmentapp_webapp_manifest_version"
+    ],
+    "3": [
+      "aps_approuter_approuter_package",
+      "aps_approuter_approuter_package_dependencies",
+      "aps_approuter_approuter_package_dependencies_sap_approuter",
+      "aps_approuter_approuter_package_engines",
+      "aps_approuter_approuter_package_engines_node",
+      "aps_approuter_approuter_package_name",
+      "aps_approuter_approuter_package_scripts",
+      "aps_approuter_approuter_package_scripts_start",
+      "sap_approuter"
+    ],
+    "4": [
+      "aps_orderfulfillmentapp_webapp_manifest_contentdensities_compact",
+      "aps_orderfulfillmentapp_webapp_manifest_contentdensities_cozy",
+      "aps_orderfulfillmentapp_webapp_manifest_rootview_async",
+      "aps_orderfulfillmentapp_webapp_manifest_rootview_id",
+      "aps_orderfulfillmentapp_webapp_manifest_rootview_type",
+      "aps_orderfulfillmentapp_webapp_manifest_rootview_viewname",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui5",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_contentdensities",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_rootview"
+    ],
+    "5": [
+      "aps_orderfulfillmentapp_webapp_manifest_dependencies_libs",
+      "aps_orderfulfillmentapp_webapp_manifest_dependencies_minui5version",
+      "aps_orderfulfillmentapp_webapp_manifest_libs_sap_f",
+      "aps_orderfulfillmentapp_webapp_manifest_libs_sap_m",
+      "aps_orderfulfillmentapp_webapp_manifest_libs_sap_ui_core",
+      "aps_orderfulfillmentapp_webapp_manifest_libs_sap_ui_layout",
+      "aps_orderfulfillmentapp_webapp_manifest_libs_sap_uxap",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_dependencies",
+      "minui5version"
+    ],
+    "6": [
+      "aps_orderfulfillmentapp_webapp_manifest_devicetypes_desktop",
+      "aps_orderfulfillmentapp_webapp_manifest_devicetypes_phone",
+      "aps_orderfulfillmentapp_webapp_manifest_devicetypes_tablet",
+      "aps_orderfulfillmentapp_webapp_manifest_icons_icon",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui_devicetypes",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui_fullwidth",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui_icons",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui_technology"
+    ],
+    "7": [
+      "aps_orderfulfillmentapp_webapp_manifest_config_async",
+      "aps_orderfulfillmentapp_webapp_manifest_config_controlaggregation",
+      "aps_orderfulfillmentapp_webapp_manifest_config_controlid",
+      "aps_orderfulfillmentapp_webapp_manifest_config_routerclass",
+      "aps_orderfulfillmentapp_webapp_manifest_config_viewpath",
+      "aps_orderfulfillmentapp_webapp_manifest_config_viewtype",
+      "aps_orderfulfillmentapp_webapp_manifest_routing_config"
+    ],
+    "8": [
+      "aps_orderfulfillmentapp_webapp_manifest_datasources_mainservice",
+      "aps_orderfulfillmentapp_webapp_manifest_mainservice_settings",
+      "aps_orderfulfillmentapp_webapp_manifest_mainservice_type",
+      "aps_orderfulfillmentapp_webapp_manifest_mainservice_uri",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_app_datasources",
+      "aps_orderfulfillmentapp_webapp_manifest_settings_localuri",
+      "aps_orderfulfillmentapp_webapp_manifest_settings_odataversion"
+    ],
+    "9": [
+      "aps_orderfulfillmentapp_webapp_manifest_i18n_settings",
+      "aps_orderfulfillmentapp_webapp_manifest_i18n_type",
+      "aps_orderfulfillmentapp_webapp_manifest_models_i18n",
+      "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_models",
+      "aps_orderfulfillmentapp_webapp_manifest_settings_bundlename",
+      "aps_orderfulfillmentapp_webapp_manifest_settings_fallbacklocale",
+      "aps_orderfulfillmentapp_webapp_manifest_settings_supportedlocales"
+    ],
+    "10": [
+      "aps_orderfulfillmentapp_webapp_localservice_mockserver",
+      "aps_orderfulfillmentapp_webapp_localservice_mockserver_addmetadata",
+      "aps_orderfulfillmentapp_webapp_localservice_mockserver_baseurl",
+      "aps_orderfulfillmentapp_webapp_localservice_mockserver_loadjson",
+      "aps_orderfulfillmentapp_webapp_localservice_mockserver_quote"
+    ],
+    "11": [
+      "aps_orderfulfillmentapp_webapp_component"
+    ],
+    "12": [
+      "aps_orderfulfillmentapp_webapp_controller_app_controller"
+    ],
+    "13": [
+      "aps_orderfulfillmentapp_webapp_controller_createorder_controller"
+    ],
+    "14": [
+      "aps_orderfulfillmentapp_webapp_controller_orderdetail_controller"
+    ],
+    "15": [
+      "aps_orderfulfillmentapp_webapp_controller_orderlist_controller"
+    ],
+    "16": [
+      "aps_orderfulfillmentapp_webapp_model_formatter"
+    ],
+    "17": [
+      "aps_orderfulfillmentapp_webapp_model_models"
+    ]
+  },
+  "cohesion": {
+    "0": 0.13333333333333333,
+    "1": 0.15384615384615385,
+    "2": 0.15384615384615385,
+    "3": 0.2222222222222222,
+    "4": 0.2222222222222222,
+    "5": 0.2222222222222222,
+    "6": 0.2222222222222222,
+    "7": 0.2857142857142857,
+    "8": 0.2857142857142857,
+    "9": 0.2857142857142857,
+    "10": 0.5,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0
+  },
+  "gods": [
+    {
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app",
+      "label": "sap.app",
+      "degree": 8
+    },
+    {
+      "id": "aps_orderfulfillmentapp_webapp_manifest_routing_config",
+      "label": "config",
+      "degree": 7
+    },
+    {
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5",
+      "label": "sap.ui5",
+      "degree": 6
+    },
+    {
+      "id": "aps_orderfulfillmentapp_webapp_manifest_dependencies_libs",
+      "label": "libs",
+      "degree": 6
+    },
+    {
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui",
+      "label": "sap.ui",
+      "degree": 5
+    },
+    {
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_rootview",
+      "label": "rootView",
+      "degree": 5
+    },
+    {
+      "id": "aps_orderfulfillmentapp_package_scripts",
+      "label": "scripts",
+      "degree": 4
+    },
+    {
+      "id": "aps_orderfulfillmentapp_webapp_manifest_datasources_mainservice",
+      "label": "mainService",
+      "degree": 4
+    },
+    {
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui_devicetypes",
+      "label": "deviceTypes",
+      "degree": 4
+    },
+    {
+      "id": "aps_orderfulfillmentapp_webapp_manifest_i18n_settings",
+      "label": "settings",
+      "degree": 4
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `sap.ui5` connect `sap.ui5` to `targets`, `settings`, `sap.app`, `libs`?",
+      "why": "High betweenness centrality (0.351) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `routing` connect `targets` to `sap.ui5`, `config`?",
+      "why": "High betweenness centrality (0.212) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `sap.app` connect `sap.app` to `mainService`?",
+      "why": "High betweenness centrality (0.157) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `name`, `node`, `@sap/approuter` to the rest of the system?",
+      "why": "63 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `targets` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
