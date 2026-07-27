@@ -1,39 +1,7 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {
-    "hyperedges": [
-      {
-        "id": "hyperedge_html5_hosting_pattern",
-        "label": "SAP BTP HTML5 app hosting pattern: app-host + app-runtime + central approuter",
-        "relation": "participates_in",
-        "confidence": "INFERRED",
-        "confidence_score": 0.9,
-        "source_file": "aps-approuter/mta.yaml",
-        "rationale": "These three nodes together implement the BTP managed HTML5 hosting pattern: individual apps upload to their own app-host; the central approuter binds the app-runtime to serve them all at runtime.",
-        "nodes": [
-          "aps_approuter_mta_approuter_module",
-          "aps_approuter_mta_html5_runtime_resource",
-          "aps_orderfulfillmentapp_mta_html5_host_resource"
-        ]
-      },
-      {
-        "id": "hyperedge_orderfulfillment_deploy_chain",
-        "label": "order-fulfillment-app build-deploy-serve chain",
-        "relation": "participates_in",
-        "confidence": "INFERRED",
-        "confidence_score": 0.85,
-        "source_file": "aps-orderfulfillmentapp/mta.yaml",
-        "rationale": "The app module builds the zip, the deployer pushes it to the app-host, and the index.html bootstrap is what end-users load \u2014 these four nodes form the full deployment-to-serving lifecycle.",
-        "nodes": [
-          "aps_orderfulfillmentapp_mta_app_module",
-          "aps_orderfulfillmentapp_mta_deployer_module",
-          "aps_orderfulfillmentapp_mta_html5_host_resource",
-          "aps_orderfulfillmentapp_webapp_index_html_bootstrap"
-        ]
-      }
-    ]
-  },
+  "graph": {},
   "nodes": [
     {
       "label": "approuter/package.json",
@@ -41,10 +9,10 @@
       "source_file": "aps-approuter/approuter/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "approuter/package.json",
+      "community": 3,
       "norm_label": "approuter/package.json",
-      "id": "aps_approuter_approuter_package"
+      "id": "aps_approuter_approuter_package",
+      "community_name": "approuter/package.json"
     },
     {
       "label": "name",
@@ -52,10 +20,10 @@
       "source_file": "aps-approuter/approuter/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "approuter/package.json",
+      "community": 3,
       "norm_label": "name",
-      "id": "aps_approuter_approuter_package_name"
+      "id": "aps_approuter_approuter_package_name",
+      "community_name": "approuter/package.json"
     },
     {
       "label": "engines",
@@ -63,10 +31,10 @@
       "source_file": "aps-approuter/approuter/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "approuter/package.json",
+      "community": 3,
       "norm_label": "engines",
-      "id": "aps_approuter_approuter_package_engines"
+      "id": "aps_approuter_approuter_package_engines",
+      "community_name": "approuter/package.json"
     },
     {
       "label": "node",
@@ -74,10 +42,10 @@
       "source_file": "aps-approuter/approuter/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "approuter/package.json",
+      "community": 3,
       "norm_label": "node",
-      "id": "aps_approuter_approuter_package_engines_node"
+      "id": "aps_approuter_approuter_package_engines_node",
+      "community_name": "approuter/package.json"
     },
     {
       "label": "dependencies",
@@ -85,10 +53,10 @@
       "source_file": "aps-approuter/approuter/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "approuter/package.json",
+      "community": 3,
       "norm_label": "dependencies",
-      "id": "aps_approuter_approuter_package_dependencies"
+      "id": "aps_approuter_approuter_package_dependencies",
+      "community_name": "approuter/package.json"
     },
     {
       "label": "@sap/approuter",
@@ -96,10 +64,10 @@
       "source_file": "aps-approuter/approuter/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "approuter/package.json",
+      "community": 3,
       "norm_label": "@sap/approuter",
-      "id": "aps_approuter_approuter_package_dependencies_sap_approuter"
+      "id": "aps_approuter_approuter_package_dependencies_sap_approuter",
+      "community_name": "approuter/package.json"
     },
     {
       "label": "@sap/approuter",
@@ -107,10 +75,10 @@
       "source_file": "aps-approuter/approuter/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "approuter/package.json",
+      "community": 3,
       "norm_label": "@sap/approuter",
-      "id": "sap_approuter"
+      "id": "sap_approuter",
+      "community_name": "approuter/package.json"
     },
     {
       "label": "scripts",
@@ -118,10 +86,10 @@
       "source_file": "aps-approuter/approuter/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "approuter/package.json",
+      "community": 3,
       "norm_label": "scripts",
-      "id": "aps_approuter_approuter_package_scripts"
+      "id": "aps_approuter_approuter_package_scripts",
+      "community_name": "approuter/package.json"
     },
     {
       "label": "start",
@@ -129,10 +97,10 @@
       "source_file": "aps-approuter/approuter/package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "approuter/package.json",
+      "community": 3,
       "norm_label": "start",
-      "id": "aps_approuter_approuter_package_scripts_start"
+      "id": "aps_approuter_approuter_package_scripts_start",
+      "community_name": "approuter/package.json"
     },
     {
       "label": "aps-orderfulfillmentapp/package.json",
@@ -140,10 +108,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "aps-orderfulfillmentapp/package.json",
-      "id": "aps_orderfulfillmentapp_package"
+      "id": "aps_orderfulfillmentapp_package",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "name",
@@ -151,10 +119,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "name",
-      "id": "aps_orderfulfillmentapp_package_name"
+      "id": "aps_orderfulfillmentapp_package_name",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "version",
@@ -162,10 +130,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "version",
-      "id": "aps_orderfulfillmentapp_package_version"
+      "id": "aps_orderfulfillmentapp_package_version",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "description",
@@ -173,10 +141,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "description",
-      "id": "aps_orderfulfillmentapp_package_description"
+      "id": "aps_orderfulfillmentapp_package_description",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "scripts",
@@ -184,10 +152,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "scripts",
-      "id": "aps_orderfulfillmentapp_package_scripts"
+      "id": "aps_orderfulfillmentapp_package_scripts",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "start",
@@ -195,10 +163,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "start",
-      "id": "aps_orderfulfillmentapp_package_scripts_start"
+      "id": "aps_orderfulfillmentapp_package_scripts_start",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "build",
@@ -206,10 +174,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "build",
-      "id": "aps_orderfulfillmentapp_package_scripts_build"
+      "id": "aps_orderfulfillmentapp_package_scripts_build",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "lint",
@@ -217,10 +185,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "lint",
-      "id": "aps_orderfulfillmentapp_package_scripts_lint"
+      "id": "aps_orderfulfillmentapp_package_scripts_lint",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "devDependencies",
@@ -228,10 +196,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L10",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "devdependencies",
-      "id": "aps_orderfulfillmentapp_package_devdependencies"
+      "id": "aps_orderfulfillmentapp_package_devdependencies",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "@ui5/cli",
@@ -239,10 +207,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "@ui5/cli",
-      "id": "aps_orderfulfillmentapp_package_devdependencies_ui5_cli"
+      "id": "aps_orderfulfillmentapp_package_devdependencies_ui5_cli",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "@ui5/cli",
@@ -250,10 +218,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "@ui5/cli",
-      "id": "ui5_cli"
+      "id": "ui5_cli",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "overrides",
@@ -261,10 +229,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "overrides",
-      "id": "aps_orderfulfillmentapp_package_overrides"
+      "id": "aps_orderfulfillmentapp_package_overrides",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "undici",
@@ -272,10 +240,10 @@
       "source_file": "aps-orderfulfillmentapp/package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "aps-orderfulfillmentapp/package.json",
+      "community": 1,
       "norm_label": "undici",
-      "id": "aps_orderfulfillmentapp_package_overrides_undici"
+      "id": "aps_orderfulfillmentapp_package_overrides_undici",
+      "community_name": "aps-orderfulfillmentapp/package.json"
     },
     {
       "label": "Component.js",
@@ -284,9 +252,9 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 11,
-      "community_name": "Component.js",
       "norm_label": "component.js",
-      "id": "aps_orderfulfillmentapp_webapp_component"
+      "id": "aps_orderfulfillmentapp_webapp_component",
+      "community_name": "Component.js"
     },
     {
       "label": "App.controller.js",
@@ -295,9 +263,9 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 12,
-      "community_name": "App.controller.js",
       "norm_label": "app.controller.js",
-      "id": "aps_orderfulfillmentapp_webapp_controller_app_controller"
+      "id": "aps_orderfulfillmentapp_webapp_controller_app_controller",
+      "community_name": "App.controller.js"
     },
     {
       "label": "CreateOrder.controller.js",
@@ -306,9 +274,9 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 13,
-      "community_name": "CreateOrder.controller.js",
       "norm_label": "createorder.controller.js",
-      "id": "aps_orderfulfillmentapp_webapp_controller_createorder_controller"
+      "id": "aps_orderfulfillmentapp_webapp_controller_createorder_controller",
+      "community_name": "CreateOrder.controller.js"
     },
     {
       "label": "OrderDetail.controller.js",
@@ -317,9 +285,9 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 14,
-      "community_name": "OrderDetail.controller.js",
       "norm_label": "orderdetail.controller.js",
-      "id": "aps_orderfulfillmentapp_webapp_controller_orderdetail_controller"
+      "id": "aps_orderfulfillmentapp_webapp_controller_orderdetail_controller",
+      "community_name": "OrderDetail.controller.js"
     },
     {
       "label": "OrderList.controller.js",
@@ -328,9 +296,9 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 15,
-      "community_name": "OrderList.controller.js",
       "norm_label": "orderlist.controller.js",
-      "id": "aps_orderfulfillmentapp_webapp_controller_orderlist_controller"
+      "id": "aps_orderfulfillmentapp_webapp_controller_orderlist_controller",
+      "community_name": "OrderList.controller.js"
     },
     {
       "label": "mockServer.js",
@@ -338,10 +306,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/localService/mockServer.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 9,
-      "community_name": "mockServer.js",
+      "community": 10,
       "norm_label": "mockserver.js",
-      "id": "aps_orderfulfillmentapp_webapp_localservice_mockserver"
+      "id": "aps_orderfulfillmentapp_webapp_localservice_mockserver",
+      "community_name": "mockServer.js"
     },
     {
       "label": "_baseUrl()",
@@ -349,10 +317,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/localService/mockServer.js",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 9,
-      "community_name": "mockServer.js",
+      "community": 10,
       "norm_label": "_baseurl()",
-      "id": "aps_orderfulfillmentapp_webapp_localservice_mockserver_baseurl"
+      "id": "aps_orderfulfillmentapp_webapp_localservice_mockserver_baseurl",
+      "community_name": "mockServer.js"
     },
     {
       "label": "_loadJson()",
@@ -360,10 +328,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/localService/mockServer.js",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 9,
-      "community_name": "mockServer.js",
+      "community": 10,
       "norm_label": "_loadjson()",
-      "id": "aps_orderfulfillmentapp_webapp_localservice_mockserver_loadjson"
+      "id": "aps_orderfulfillmentapp_webapp_localservice_mockserver_loadjson",
+      "community_name": "mockServer.js"
     },
     {
       "label": "_quote()",
@@ -371,10 +339,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/localService/mockServer.js",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 9,
-      "community_name": "mockServer.js",
+      "community": 10,
       "norm_label": "_quote()",
-      "id": "aps_orderfulfillmentapp_webapp_localservice_mockserver_quote"
+      "id": "aps_orderfulfillmentapp_webapp_localservice_mockserver_quote",
+      "community_name": "mockServer.js"
     },
     {
       "label": "_addMetadata()",
@@ -382,10 +350,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/localService/mockServer.js",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 9,
-      "community_name": "mockServer.js",
+      "community": 10,
       "norm_label": "_addmetadata()",
-      "id": "aps_orderfulfillmentapp_webapp_localservice_mockserver_addmetadata"
+      "id": "aps_orderfulfillmentapp_webapp_localservice_mockserver_addmetadata",
+      "community_name": "mockServer.js"
     },
     {
       "label": "manifest.json",
@@ -393,10 +361,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "manifest.json",
-      "id": "aps_orderfulfillmentapp_webapp_manifest"
+      "id": "aps_orderfulfillmentapp_webapp_manifest",
+      "community_name": "sap.app"
     },
     {
       "label": "_version",
@@ -404,10 +372,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "_version",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_version"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_version",
+      "community_name": "sap.app"
     },
     {
       "label": "sap.app",
@@ -415,10 +383,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "sap.app",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app",
+      "community_name": "sap.app"
     },
     {
       "label": "id",
@@ -426,10 +394,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "id",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_id"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_id",
+      "community_name": "sap.app"
     },
     {
       "label": "type",
@@ -437,10 +405,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "type",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_type"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_type",
+      "community_name": "sap.app"
     },
     {
       "label": "i18n",
@@ -448,10 +416,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "i18n",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_i18n"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_i18n",
+      "community_name": "sap.app"
     },
     {
       "label": "title",
@@ -459,10 +427,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "title",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_title"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_title",
+      "community_name": "sap.app"
     },
     {
       "label": "description",
@@ -470,10 +438,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "description",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_description"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_description",
+      "community_name": "sap.app"
     },
     {
       "label": "applicationVersion",
@@ -481,10 +449,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "applicationversion",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_applicationversion"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_applicationversion",
+      "community_name": "sap.app"
     },
     {
       "label": "version",
@@ -492,10 +460,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "version",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_applicationversion_version"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_applicationversion_version",
+      "community_name": "sap.app"
     },
     {
       "label": "dataSources",
@@ -504,9 +472,9 @@
       "source_location": "L10",
       "_origin": "ast",
       "community": 8,
-      "community_name": "mainService",
       "norm_label": "datasources",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_datasources"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_app_datasources",
+      "community_name": "mainService"
     },
     {
       "label": "mainService",
@@ -515,9 +483,9 @@
       "source_location": "L11",
       "_origin": "ast",
       "community": 8,
-      "community_name": "mainService",
       "norm_label": "mainservice",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_datasources_mainservice"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_datasources_mainservice",
+      "community_name": "mainService"
     },
     {
       "label": "uri",
@@ -526,9 +494,9 @@
       "source_location": "L12",
       "_origin": "ast",
       "community": 8,
-      "community_name": "mainService",
       "norm_label": "uri",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_mainservice_uri"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_mainservice_uri",
+      "community_name": "mainService"
     },
     {
       "label": "type",
@@ -537,9 +505,9 @@
       "source_location": "L13",
       "_origin": "ast",
       "community": 8,
-      "community_name": "mainService",
       "norm_label": "type",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_mainservice_type"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_mainservice_type",
+      "community_name": "mainService"
     },
     {
       "label": "settings",
@@ -548,9 +516,9 @@
       "source_location": "L14",
       "_origin": "ast",
       "community": 8,
-      "community_name": "mainService",
       "norm_label": "settings",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_mainservice_settings"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_mainservice_settings",
+      "community_name": "mainService"
     },
     {
       "label": "odataVersion",
@@ -559,9 +527,9 @@
       "source_location": "L15",
       "_origin": "ast",
       "community": 8,
-      "community_name": "mainService",
       "norm_label": "odataversion",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_settings_odataversion"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_settings_odataversion",
+      "community_name": "mainService"
     },
     {
       "label": "localUri",
@@ -570,9 +538,9 @@
       "source_location": "L16",
       "_origin": "ast",
       "community": 8,
-      "community_name": "mainService",
       "norm_label": "localuri",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_settings_localuri"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_settings_localuri",
+      "community_name": "mainService"
     },
     {
       "label": "sap.ui",
@@ -580,10 +548,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "sap.ui",
+      "community": 6,
       "norm_label": "sap.ui",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui",
+      "community_name": "sap.ui"
     },
     {
       "label": "technology",
@@ -591,10 +559,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "sap.ui",
+      "community": 6,
       "norm_label": "technology",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui_technology"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui_technology",
+      "community_name": "sap.ui"
     },
     {
       "label": "icons",
@@ -602,10 +570,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "sap.ui",
+      "community": 6,
       "norm_label": "icons",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui_icons"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui_icons",
+      "community_name": "sap.ui"
     },
     {
       "label": "icon",
@@ -613,10 +581,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "sap.ui",
+      "community": 6,
       "norm_label": "icon",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_icons_icon"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_icons_icon",
+      "community_name": "sap.ui"
     },
     {
       "label": "deviceTypes",
@@ -624,10 +592,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "sap.ui",
+      "community": 6,
       "norm_label": "devicetypes",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui_devicetypes"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui_devicetypes",
+      "community_name": "sap.ui"
     },
     {
       "label": "desktop",
@@ -635,10 +603,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "sap.ui",
+      "community": 6,
       "norm_label": "desktop",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_devicetypes_desktop"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_devicetypes_desktop",
+      "community_name": "sap.ui"
     },
     {
       "label": "tablet",
@@ -646,10 +614,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "sap.ui",
+      "community": 6,
       "norm_label": "tablet",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_devicetypes_tablet"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_devicetypes_tablet",
+      "community_name": "sap.ui"
     },
     {
       "label": "phone",
@@ -657,10 +625,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "sap.ui",
+      "community": 6,
       "norm_label": "phone",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_devicetypes_phone"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_devicetypes_phone",
+      "community_name": "sap.ui"
     },
     {
       "label": "fullWidth",
@@ -668,10 +636,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "sap.ui",
+      "community": 6,
       "norm_label": "fullwidth",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui_fullwidth"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui_fullwidth",
+      "community_name": "sap.ui"
     },
     {
       "label": "sap.cloud",
@@ -679,10 +647,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "sap.cloud",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_cloud"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_cloud",
+      "community_name": "sap.app"
     },
     {
       "label": "service",
@@ -690,10 +658,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L34",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "service",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_cloud_service"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_cloud_service",
+      "community_name": "sap.app"
     },
     {
       "label": "public",
@@ -701,10 +669,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L35",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "sap.app",
+      "community": 2,
       "norm_label": "public",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_cloud_public"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_cloud_public",
+      "community_name": "sap.app"
     },
     {
       "label": "sap.ui5",
@@ -712,10 +680,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "sap.ui5",
+      "community": 4,
       "norm_label": "sap.ui5",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5",
+      "community_name": "sap.ui5"
     },
     {
       "label": "rootView",
@@ -723,10 +691,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "sap.ui5",
+      "community": 4,
       "norm_label": "rootview",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_rootview"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_rootview",
+      "community_name": "sap.ui5"
     },
     {
       "label": "viewName",
@@ -734,10 +702,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "sap.ui5",
+      "community": 4,
       "norm_label": "viewname",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_rootview_viewname"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_rootview_viewname",
+      "community_name": "sap.ui5"
     },
     {
       "label": "type",
@@ -745,10 +713,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L40",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "sap.ui5",
+      "community": 4,
       "norm_label": "type",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_rootview_type"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_rootview_type",
+      "community_name": "sap.ui5"
     },
     {
       "label": "async",
@@ -756,10 +724,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "sap.ui5",
+      "community": 4,
       "norm_label": "async",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_rootview_async"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_rootview_async",
+      "community_name": "sap.ui5"
     },
     {
       "label": "id",
@@ -767,10 +735,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L42",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "sap.ui5",
+      "community": 4,
       "norm_label": "id",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_rootview_id"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_rootview_id",
+      "community_name": "sap.ui5"
     },
     {
       "label": "dependencies",
@@ -778,10 +746,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L44",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "libs",
+      "community": 5,
       "norm_label": "dependencies",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_dependencies"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_dependencies",
+      "community_name": "libs"
     },
     {
       "label": "minUI5Version",
@@ -789,10 +757,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L45",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "libs",
+      "community": 5,
       "norm_label": "minui5version",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_dependencies_minui5version"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_dependencies_minui5version",
+      "community_name": "libs"
     },
     {
       "label": "minUI5Version",
@@ -800,10 +768,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L45",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "libs",
+      "community": 5,
       "norm_label": "minui5version",
-      "id": "minui5version"
+      "id": "minui5version",
+      "community_name": "libs"
     },
     {
       "label": "libs",
@@ -811,10 +779,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "libs",
+      "community": 5,
       "norm_label": "libs",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_dependencies_libs"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_dependencies_libs",
+      "community_name": "libs"
     },
     {
       "label": "sap.ui.core",
@@ -822,10 +790,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "libs",
+      "community": 5,
       "norm_label": "sap.ui.core",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_libs_sap_ui_core"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_libs_sap_ui_core",
+      "community_name": "libs"
     },
     {
       "label": "sap.m",
@@ -833,10 +801,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L48",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "libs",
+      "community": 5,
       "norm_label": "sap.m",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_libs_sap_m"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_libs_sap_m",
+      "community_name": "libs"
     },
     {
       "label": "sap.ui.layout",
@@ -844,10 +812,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L49",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "libs",
+      "community": 5,
       "norm_label": "sap.ui.layout",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_libs_sap_ui_layout"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_libs_sap_ui_layout",
+      "community_name": "libs"
     },
     {
       "label": "sap.uxap",
@@ -855,10 +823,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "libs",
+      "community": 5,
       "norm_label": "sap.uxap",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_libs_sap_uxap"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_libs_sap_uxap",
+      "community_name": "libs"
     },
     {
       "label": "sap.f",
@@ -866,10 +834,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "libs",
+      "community": 5,
       "norm_label": "sap.f",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_libs_sap_f"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_libs_sap_f",
+      "community_name": "libs"
     },
     {
       "label": "models",
@@ -877,10 +845,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L54",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "settings",
+      "community": 9,
       "norm_label": "models",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_models"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_models",
+      "community_name": "settings"
     },
     {
       "label": "i18n",
@@ -888,10 +856,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L55",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "settings",
+      "community": 9,
       "norm_label": "i18n",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_models_i18n"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_models_i18n",
+      "community_name": "settings"
     },
     {
       "label": "type",
@@ -899,10 +867,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "settings",
+      "community": 9,
       "norm_label": "type",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_i18n_type"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_i18n_type",
+      "community_name": "settings"
     },
     {
       "label": "settings",
@@ -910,10 +878,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "settings",
+      "community": 9,
       "norm_label": "settings",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_i18n_settings"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_i18n_settings",
+      "community_name": "settings"
     },
     {
       "label": "bundleName",
@@ -921,10 +889,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "settings",
+      "community": 9,
       "norm_label": "bundlename",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_settings_bundlename"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_settings_bundlename",
+      "community_name": "settings"
     },
     {
       "label": "supportedLocales",
@@ -932,10 +900,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "settings",
+      "community": 9,
       "norm_label": "supportedlocales",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_settings_supportedlocales"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_settings_supportedlocales",
+      "community_name": "settings"
     },
     {
       "label": "fallbackLocale",
@@ -943,10 +911,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L60",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "settings",
+      "community": 9,
       "norm_label": "fallbacklocale",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_settings_fallbacklocale"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_settings_fallbacklocale",
+      "community_name": "settings"
     },
     {
       "label": "routing",
@@ -955,9 +923,9 @@
       "source_location": "L73",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "routing",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_routing"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_routing",
+      "community_name": "targets"
     },
     {
       "label": "config",
@@ -965,10 +933,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L74",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "config",
+      "community": 7,
       "norm_label": "config",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_routing_config"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_routing_config",
+      "community_name": "config"
     },
     {
       "label": "routerClass",
@@ -976,10 +944,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L75",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "config",
+      "community": 7,
       "norm_label": "routerclass",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_config_routerclass"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_config_routerclass",
+      "community_name": "config"
     },
     {
       "label": "viewType",
@@ -987,10 +955,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L76",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "config",
+      "community": 7,
       "norm_label": "viewtype",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_config_viewtype"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_config_viewtype",
+      "community_name": "config"
     },
     {
       "label": "viewPath",
@@ -998,10 +966,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L77",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "config",
+      "community": 7,
       "norm_label": "viewpath",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_config_viewpath"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_config_viewpath",
+      "community_name": "config"
     },
     {
       "label": "controlId",
@@ -1009,10 +977,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L78",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "config",
+      "community": 7,
       "norm_label": "controlid",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_config_controlid"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_config_controlid",
+      "community_name": "config"
     },
     {
       "label": "controlAggregation",
@@ -1020,10 +988,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L79",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "config",
+      "community": 7,
       "norm_label": "controlaggregation",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_config_controlaggregation"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_config_controlaggregation",
+      "community_name": "config"
     },
     {
       "label": "async",
@@ -1031,10 +999,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 0,
-      "community_name": "config",
+      "community": 7,
       "norm_label": "async",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_config_async"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_config_async",
+      "community_name": "config"
     },
     {
       "label": "routes",
@@ -1043,9 +1011,9 @@
       "source_location": "L82",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "routes",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_routing_routes"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_routing_routes",
+      "community_name": "targets"
     },
     {
       "label": "targets",
@@ -1054,9 +1022,9 @@
       "source_location": "L99",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "targets",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_routing_targets"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_routing_targets",
+      "community_name": "targets"
     },
     {
       "label": "orderList",
@@ -1064,10 +1032,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L100",
       "_origin": "ast",
-      "community": 10,
-      "community_name": "targets",
+      "community": 0,
       "norm_label": "orderlist",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_targets_orderlist"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_targets_orderlist",
+      "community_name": "targets"
     },
     {
       "label": "viewName",
@@ -1075,10 +1043,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L101",
       "_origin": "ast",
-      "community": 10,
-      "community_name": "targets",
+      "community": 0,
       "norm_label": "viewname",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_orderlist_viewname"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_orderlist_viewname",
+      "community_name": "targets"
     },
     {
       "label": "viewId",
@@ -1086,10 +1054,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L102",
       "_origin": "ast",
-      "community": 10,
-      "community_name": "targets",
+      "community": 0,
       "norm_label": "viewid",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_orderlist_viewid"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_orderlist_viewid",
+      "community_name": "targets"
     },
     {
       "label": "viewLevel",
@@ -1097,10 +1065,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L103",
       "_origin": "ast",
-      "community": 10,
-      "community_name": "targets",
+      "community": 0,
       "norm_label": "viewlevel",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_orderlist_viewlevel"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_orderlist_viewlevel",
+      "community_name": "targets"
     },
     {
       "label": "orderDetail",
@@ -1109,9 +1077,9 @@
       "source_location": "L105",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "orderdetail",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_targets_orderdetail"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_targets_orderdetail",
+      "community_name": "targets"
     },
     {
       "label": "viewName",
@@ -1120,9 +1088,9 @@
       "source_location": "L106",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "viewname",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_orderdetail_viewname"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_orderdetail_viewname",
+      "community_name": "targets"
     },
     {
       "label": "viewId",
@@ -1131,9 +1099,9 @@
       "source_location": "L107",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "viewid",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_orderdetail_viewid"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_orderdetail_viewid",
+      "community_name": "targets"
     },
     {
       "label": "viewLevel",
@@ -1142,9 +1110,9 @@
       "source_location": "L108",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "viewlevel",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_orderdetail_viewlevel"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_orderdetail_viewlevel",
+      "community_name": "targets"
     },
     {
       "label": "createOrder",
@@ -1153,9 +1121,9 @@
       "source_location": "L110",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "createorder",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_targets_createorder"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_targets_createorder",
+      "community_name": "targets"
     },
     {
       "label": "viewName",
@@ -1164,9 +1132,9 @@
       "source_location": "L111",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "viewname",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_createorder_viewname"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_createorder_viewname",
+      "community_name": "targets"
     },
     {
       "label": "viewId",
@@ -1175,9 +1143,9 @@
       "source_location": "L112",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "viewid",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_createorder_viewid"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_createorder_viewid",
+      "community_name": "targets"
     },
     {
       "label": "viewLevel",
@@ -1186,9 +1154,9 @@
       "source_location": "L113",
       "_origin": "ast",
       "community": 0,
-      "community_name": "targets",
       "norm_label": "viewlevel",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_createorder_viewlevel"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_createorder_viewlevel",
+      "community_name": "targets"
     },
     {
       "label": "contentDensities",
@@ -1196,10 +1164,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L117",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "sap.ui5",
+      "community": 4,
       "norm_label": "contentdensities",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_contentdensities"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_contentdensities",
+      "community_name": "sap.ui5"
     },
     {
       "label": "compact",
@@ -1207,10 +1175,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L118",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "sap.ui5",
+      "community": 4,
       "norm_label": "compact",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_contentdensities_compact"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_contentdensities_compact",
+      "community_name": "sap.ui5"
     },
     {
       "label": "cozy",
@@ -1218,10 +1186,10 @@
       "source_file": "aps-orderfulfillmentapp/webapp/manifest.json",
       "source_location": "L119",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "sap.ui5",
+      "community": 4,
       "norm_label": "cozy",
-      "id": "aps_orderfulfillmentapp_webapp_manifest_contentdensities_cozy"
+      "id": "aps_orderfulfillmentapp_webapp_manifest_contentdensities_cozy",
+      "community_name": "sap.ui5"
     },
     {
       "label": "formatter.js",
@@ -1230,9 +1198,9 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 16,
-      "community_name": "formatter.js",
       "norm_label": "formatter.js",
-      "id": "aps_orderfulfillmentapp_webapp_model_formatter"
+      "id": "aps_orderfulfillmentapp_webapp_model_formatter",
+      "community_name": "formatter.js"
     },
     {
       "label": "models.js",
@@ -1241,196 +1209,9 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 17,
-      "community_name": "models.js",
       "norm_label": "models.js",
-      "id": "aps_orderfulfillmentapp_webapp_model_models"
-    },
-    {
-      "label": "NodeJS-CentralAppRouter (README)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Centralized App Router pattern: one shared aps-approuter serves all SAP BTP HTML5 apps rather than each app bundling its own router, reducing resource usage and centralizing auth/routing.",
-      "id": "readme_nodejs_central_approuter",
-      "community": 2,
-      "norm_label": "nodejs-centralapprouter (readme)"
-    },
-    {
-      "label": "aps-approuter MTA module (nodejs)",
-      "file_type": "document",
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": "modules[0]",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "aps_approuter_mta_approuter_module",
-      "community": 2,
-      "norm_label": "aps-approuter mta module (nodejs)"
-    },
-    {
-      "label": "XSUAA-application-APSAppRouter (existing-service)",
-      "file_type": "document",
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": "resources[0]",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "aps_approuter_mta_xsuaa_resource",
-      "community": 2,
-      "norm_label": "xsuaa-application-apsapprouter (existing-service)"
-    },
-    {
-      "label": "HTML5-app_runtime-APSAppRouter (html5-apps-repo app-runtime)",
-      "file_type": "document",
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": "resources[1]",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "Uses app-runtime plan (not app-host) because the approuter serves content; each individual HTML5 app registers its own app-host separately.",
-      "id": "aps_approuter_mta_html5_runtime_resource",
-      "community": 2,
-      "norm_label": "html5-app_runtime-apsapprouter (html5-apps-repo app-runtime)"
-    },
-    {
-      "label": "DEST-lite-APSAppRouter (destination service lite)",
-      "file_type": "document",
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": "resources[2]",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "aps_approuter_mta_dest_lite_resource",
-      "community": 2,
-      "norm_label": "dest-lite-apsapprouter (destination service lite)"
-    },
-    {
-      "label": "order-fulfillment-app MTA html5 module",
-      "file_type": "document",
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": "modules[0]",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "aps_orderfulfillmentapp_mta_app_module",
-      "community": 2,
-      "norm_label": "order-fulfillment-app mta html5 module"
-    },
-    {
-      "label": "order-fulfillment-app-deployer MTA content deployer module",
-      "file_type": "document",
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": "modules[1]",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "aps_orderfulfillmentapp_mta_deployer_module",
-      "community": 2,
-      "norm_label": "order-fulfillment-app-deployer mta content deployer module"
-    },
-    {
-      "label": "order-fulfillment-app-html5-repo-host (html5-apps-repo app-host)",
-      "file_type": "document",
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": "resources[0]",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "aps_orderfulfillmentapp_mta_html5_host_resource",
-      "community": 2,
-      "norm_label": "order-fulfillment-app-html5-repo-host (html5-apps-repo app-host)"
-    },
-    {
-      "label": "order-fulfillment-app-xsuaa (xsuaa application plan)",
-      "file_type": "document",
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": "resources[1]",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "aps_orderfulfillmentapp_mta_xsuaa_resource",
-      "community": 2,
-      "norm_label": "order-fulfillment-app-xsuaa (xsuaa application plan)"
-    },
-    {
-      "label": "order-fulfillment-app-destination (destination lite, HTML5Runtime_enabled)",
-      "file_type": "document",
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": "resources[2]",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "HTML5Runtime_enabled:true registers the app-host with the managed HTML5 runtime (Work Zone) so the app appears in the HTML5 Applications tile catalogue.",
-      "id": "aps_orderfulfillmentapp_mta_destination_resource",
-      "community": 2,
-      "norm_label": "order-fulfillment-app-destination (destination lite, html5runtime_enabled)"
-    },
-    {
-      "label": "order-fulfillment-app UI5 tooling config (SAPUI5 1.120.0)",
-      "file_type": "document",
-      "source_file": "aps-orderfulfillmentapp/ui5.yaml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "aps_orderfulfillmentapp_ui5_yaml_config",
-      "community": 2,
-      "norm_label": "order-fulfillment-app ui5 tooling config (sapui5 1.120.0)"
-    },
-    {
-      "label": "Order Fulfillment SAPUI5 bootstrap (index.html)",
-      "file_type": "document",
-      "source_file": "aps-orderfulfillmentapp/webapp/index.html",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "aps_orderfulfillmentapp_webapp_index_html_bootstrap",
-      "community": 2,
-      "norm_label": "order fulfillment sapui5 bootstrap (index.html)"
-    },
-    {
-      "label": "Centralized AppRouter Pattern (SAP BTP)",
-      "file_type": "rationale",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "One shared approuter serves multiple HTML5 apps. Each app uploads to its own html5-apps-repo app-host; the central approuter uses the app-runtime plan to serve all of them. This separates routing/auth concerns from individual app deployments.",
-      "id": "concept_centralized_approuter_pattern",
-      "community": 2,
-      "norm_label": "centralized approuter pattern (sap btp)"
-    },
-    {
-      "label": "html5-apps-repo app-host vs app-runtime split",
-      "file_type": "rationale",
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "app-host: used by individual apps to upload static content. app-runtime: used by the central approuter to serve that content at runtime. They must not be swapped.",
-      "id": "concept_html5_apps_repo_split_plans",
-      "community": 2,
-      "norm_label": "html5-apps-repo app-host vs app-runtime split"
+      "id": "aps_orderfulfillmentapp_webapp_model_models",
+      "community_name": "models.js"
     }
   ],
   "links": [
@@ -2537,208 +2318,8 @@
       "confidence_score": 1.0,
       "source": "aps_orderfulfillmentapp_webapp_manifest_sap_ui5_contentdensities",
       "target": "aps_orderfulfillmentapp_webapp_manifest_contentdensities_cozy"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_nodejs_central_approuter",
-      "target": "aps_approuter_mta_approuter_module"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_nodejs_central_approuter",
-      "target": "concept_centralized_approuter_pattern"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": "modules[0].requires[2]",
-      "weight": 1.0,
-      "source": "aps_approuter_mta_approuter_module",
-      "target": "aps_approuter_mta_dest_lite_resource"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": "modules[0].requires[1]",
-      "weight": 1.0,
-      "source": "aps_approuter_mta_approuter_module",
-      "target": "aps_approuter_mta_html5_runtime_resource"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": "modules[0].requires[0]",
-      "weight": 1.0,
-      "source": "aps_approuter_mta_approuter_module",
-      "target": "aps_approuter_mta_xsuaa_resource"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.65,
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": null,
-      "weight": 0.65,
-      "source": "aps_approuter_mta_xsuaa_resource",
-      "target": "aps_orderfulfillmentapp_mta_xsuaa_resource"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "concept_centralized_approuter_pattern",
-      "target": "aps_approuter_mta_html5_runtime_resource"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "concept_html5_apps_repo_split_plans",
-      "target": "aps_approuter_mta_html5_runtime_resource"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "aps-approuter/mta.yaml",
-      "source_location": null,
-      "weight": 0.75,
-      "source": "aps_approuter_mta_dest_lite_resource",
-      "target": "aps_orderfulfillmentapp_mta_destination_resource"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "aps_orderfulfillmentapp_mta_app_module",
-      "target": "aps_orderfulfillmentapp_ui5_yaml_config"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": "modules[1].build-parameters.requires[0]",
-      "weight": 1.0,
-      "source": "aps_orderfulfillmentapp_mta_deployer_module",
-      "target": "aps_orderfulfillmentapp_mta_app_module"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": "modules[1].requires[2]",
-      "weight": 1.0,
-      "source": "aps_orderfulfillmentapp_mta_deployer_module",
-      "target": "aps_orderfulfillmentapp_mta_destination_resource"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": "modules[1].requires[0]",
-      "weight": 1.0,
-      "source": "aps_orderfulfillmentapp_mta_deployer_module",
-      "target": "aps_orderfulfillmentapp_mta_html5_host_resource"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": "modules[1].requires[1]",
-      "weight": 1.0,
-      "source": "aps_orderfulfillmentapp_mta_deployer_module",
-      "target": "aps_orderfulfillmentapp_mta_xsuaa_resource"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "concept_centralized_approuter_pattern",
-      "target": "aps_orderfulfillmentapp_mta_html5_host_resource"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "concept_html5_apps_repo_split_plans",
-      "target": "aps_orderfulfillmentapp_mta_html5_host_resource"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "aps-orderfulfillmentapp/webapp/index.html",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "aps_orderfulfillmentapp_webapp_index_html_bootstrap",
-      "target": "aps_orderfulfillmentapp_ui5_yaml_config"
     }
   ],
-  "hyperedges": [
-    {
-      "id": "hyperedge_html5_hosting_pattern",
-      "label": "SAP BTP HTML5 app hosting pattern: app-host + app-runtime + central approuter",
-      "relation": "participates_in",
-      "confidence": "INFERRED",
-      "confidence_score": 0.9,
-      "source_file": "aps-approuter/mta.yaml",
-      "rationale": "These three nodes together implement the BTP managed HTML5 hosting pattern: individual apps upload to their own app-host; the central approuter binds the app-runtime to serve them all at runtime.",
-      "nodes": [
-        "aps_approuter_mta_approuter_module",
-        "aps_approuter_mta_html5_runtime_resource",
-        "aps_orderfulfillmentapp_mta_html5_host_resource"
-      ]
-    },
-    {
-      "id": "hyperedge_orderfulfillment_deploy_chain",
-      "label": "order-fulfillment-app build-deploy-serve chain",
-      "relation": "participates_in",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "aps-orderfulfillmentapp/mta.yaml",
-      "rationale": "The app module builds the zip, the deployer pushes it to the app-host, and the index.html bootstrap is what end-users load \u2014 these four nodes form the full deployment-to-serving lifecycle.",
-      "nodes": [
-        "aps_orderfulfillmentapp_mta_app_module",
-        "aps_orderfulfillmentapp_mta_deployer_module",
-        "aps_orderfulfillmentapp_mta_html5_host_resource",
-        "aps_orderfulfillmentapp_webapp_index_html_bootstrap"
-      ]
-    }
-  ],
-  "built_at_commit": "bdc88b7492d424fd0e5de39d04d5d91a1cfa7825"
+  "hyperedges": [],
+  "built_at_commit": "4b39fa09ad360aff979d04c2eb77dcb2da19d295"
 }

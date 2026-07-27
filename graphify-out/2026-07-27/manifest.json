@@ -88,30 +88,5 @@
     "mtime": 1784514288.2851958,
     "ast_hash": "26f1399f48d8c8ee816f000e2a241d6b",
     "semantic_hash": "26f1399f48d8c8ee816f000e2a241d6b"
-  },
-  "README.md": {
-    "mtime": 1784514231.2136781,
-    "ast_hash": "48bc8766201fad02835d71aa2d892ca1",
-    "semantic_hash": "48bc8766201fad02835d71aa2d892ca1"
-  },
-  "aps-approuter/mta.yaml": {
-    "mtime": 1785121646.1153226,
-    "ast_hash": "b1183e22b56b4a31e29a9cff4f687708",
-    "semantic_hash": "b1183e22b56b4a31e29a9cff4f687708"
-  },
-  "aps-orderfulfillmentapp/mta.yaml": {
-    "mtime": 1784514242.9509134,
-    "ast_hash": "c632a719df687709cd800cd1c464b2dc",
-    "semantic_hash": "c632a719df687709cd800cd1c464b2dc"
-  },
-  "aps-orderfulfillmentapp/ui5.yaml": {
-    "mtime": 1784514288.1936564,
-    "ast_hash": "b61037d9f7d039f0e7d234717d245106",
-    "semantic_hash": "b61037d9f7d039f0e7d234717d245106"
-  },
-  "aps-orderfulfillmentapp/webapp/index.html": {
-    "mtime": 1784514288.2251797,
-    "ast_hash": "67e252e2e19c8a9bbdb49d86038ccff4",
-    "semantic_hash": "67e252e2e19c8a9bbdb49d86038ccff4"
   }
 }
